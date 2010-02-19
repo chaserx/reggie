@@ -1,0 +1,14 @@
+development:
+  bucket: myapp_development
+  access_key_id: abc
+  secret_access_key: abc/efg
+ 
+test:
+  bucket: myapp_test
+  access_key_id: abc
+  secret_access_key: abc/efg
+ 
+production:
+  bucket: myapp_test
+  access_key_id: abc
+  secret_access_key: abc/efg

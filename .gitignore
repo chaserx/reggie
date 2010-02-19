@@ -1,0 +1,10 @@
+.DS_Store
+log/*.log
+tmp/**/*
+config/database.yml
+db/*.sqlite3
+config/config.yml
+config/passwords_config.yml
+config/s3.yml
+config/newrelic.yml
+config/initializers/hoptoad.rb
