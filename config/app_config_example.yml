@@ -1,0 +1,10 @@
+config:
+  name: My Symposium
+  dates: May 14 - 15&#44 2010
+  reg_start_date: April 1&#44 2010
+  reg_stop_date:  May 1&#44 2010
+  location: My University
+  director: Smarty Pants&#44 Ph.D.
+  director_address: Department of Computer Science
+  secretary:  Ms. Moneypenny
+  secretary_address:  10 Downing Street

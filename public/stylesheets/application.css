@@ -19,7 +19,8 @@ a {
 }
 
 #container {
-  width: 75%;
+  /*width: 75%;*/
+	width: 690px;
   margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;

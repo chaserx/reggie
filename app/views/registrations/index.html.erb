@@ -1,0 +1,37 @@
+<% title "Registrations" %>
+<h1>Registration Dashboard</h1>
+<h3>&raquo; Quick Look</h3>
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+    <th>Attendees</th>
+    <th>$ Pledged</th>
+    <th># for Lunch</th>
+    <th># for Dinner</th>
+    <th># of Abstracts</th>
+  </tr>
+  <tr>
+    <td><%= number_of_attendees %></td>
+    <td><%= number_to_currency(dollars_pledged) %></td>
+    <td><%= number_of_attendees_for_lunch %></td>
+    <td><%= number_of_attendees_for_dinner %></td>
+    <td><%= number_of_abstracts %></td>
+  </tr>
+</table>
+<hr />
+<h3>&raquo; Admin Actions</h3>
+<div id="adminActions">
+	<%= link_to 'New Registration', new_registration_path %> |
+	<%= link_to 'Download All Registration Records (CSV File)', registrations_path(:csv) %>
+</div>
+<hr />
+<h3>&raquo; All Registrants</h3>
+<div id="registrations">
+	<ul>
+		<% for registration in @registrations %>
+			<li class="<%= cycle('odd', 'even') %>"><strong><%= link_to(format_name(registration), registration)  %></strong><br /><%= hasFees(registration) %> <%= singleOrCompany(registration) %> <%= hasEveningSession(registration) %> <%= hasLunch(registration) %>, <%= getAbstract(registration) %> <br /><span><%= link_to 'Edit', edit_registration_path(registration) %> | <%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></span></li>
+		<% end %>
+	</ul>
+</div>
+
+
+<p><%= link_to "New Registration", new_registration_path %></p>

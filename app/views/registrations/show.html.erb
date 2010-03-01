@@ -1,0 +1,61 @@
+<% content_for :title, "Your Registration Receipt" %>
+<% content_for :head, "<meta name=\"robots\" content=\"noindex,nofollow\" />" %>
+<h1>Registration Receipt</h1>
+<div id="thanks">
+	<p><%= h @registration.created_at %></p>
+	<p>Thank you for registering, <%= prettyNameFormat %>. <br />Please use this receipt to send in your participant payment and keep a copy for your records.</p>
+</div>
+<div id="eventInfo">
+	<h2><%= display_eventname %></h2>
+	<h3><%= display_eventdate %></h3>
+</div>
+<div id="regInfo">
+	<h4>Personal Info</h4>
+	<ul>
+		<li><%= prettyNameFormat %></li>
+		<li><%= h @registration.organization %></li>
+		<li><%= h @registration.status %></li>
+	</ul>
+	<h4>Contact Info</h4>
+	<ul>
+		<li><%= h @registration.email %></li>
+		<li><%= h number_to_phone(@registration.phone, {:area_code => true}) %></li>
+		<li><%= h @registration.address1 %><br />
+				<%= h @registration.address2 %><br />
+				<%= h @registration.city %>,&nbsp;<%= h @registration.state %>&nbsp;<%= h @registration.zip %></li>
+	</ul>
+	<h4>Registration Info</h4>
+	<ul>
+		<li>Lunch: <%= h going_lunch?(@registration) %></li>
+		<li>Evening session: <%= h going_esession?(@registration) %></li>
+		<li>Partysize for Evening Session: <%= h @registration.partysize %></li>
+		<li>Abstract: <%= getAbstract(@registration) %></li>
+	</ul>
+</div>
+<div id="payment">
+	<h2>Payment instructions</h2>
+	<p><strong>Registration Fees: <%= h number_to_currency(@registration.fees) %></strong></p>
+	<h3>Business officer</h3>
+	<ul>
+		<li><%=h @registration.bizperson %></li>
+		<li><%=h @registration.bizpersonemail %></li>
+		<li><%=h @registration.bizpersonphone %></li>
+	</ul>
+	<h3>On-campus</h3>
+	<p>Please supply this receipt to your departmental business officer for payment by JV.</p>
+	<p>Please send a copy of the completed JV along with a copy of this registration receipt to both Accounts Payable and <%= display_secretary %>, <%= display_secretary_address %></p>
+	<p>Please transfer funds into account: 1013164500 before <%= display_reg_stop_date %></p>
+	<p>Departments are to use either a cost center or WBS account number with GL 530503 (registration).  The account for the Symposium to be credited is 1013164500 with GL 408610 (tuition).</p>
+	<p>Questions? Please contact <%= display_secretary %>, <%= display_secretary_address %></p>
+	<h3>Off-campus</h3>
+	<p>Mail a copy of this registration receipt along with your payment by <%= display_reg_stop_date %> to:</p>
+	<p><%= display_director %><br />
+	Symposium Director<br />
+	<%= display_director_address %></p>
+</div>
+
+<p>
+  <%= link_to "Edit", edit_registration_path(@registration) %> |
+  <%= link_to "Destroy", @registration, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", registrations_path %>
+</p>

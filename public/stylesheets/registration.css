@@ -1,0 +1,216 @@
+*{
+	outline:none;
+}
+body { color: #333;}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+legend{font-size: 1.5em;}
+fieldset{
+	padding:10px;
+	margin-top:10px;
+	background-color:#CFEBF6;
+	border: 1px solid #14568A;
+}
+fieldset legend {
+	font-weight: bold;
+	background:#14568A;
+	padding:5px;
+	font-size: 1.2em;
+	color:#fff;
+}
+ul#formSection {
+	margin:0;
+	padding:0;
+}
+ul#formSection li {
+	margin:0;
+	padding:0 0 20px 0;
+	position:relative;
+	clear:both;
+	list-style-type:none;
+}
+ul#formSection li span {
+	float:left;
+	padding-right: 2px;
+}
+
+div#billing ul#billSection {
+	margin:0;
+	padding:0;
+}
+div#billing ul#billSection li {
+	margin:0;
+	padding:0 0 20px 0;
+	position:relative;
+	clear:both;
+	list-style-type:none;
+}
+div#billing ul#billSection li span {
+	float:left;
+	padding-right: 2px;
+}
+ul#billSection li span label{
+	margin:0;
+	padding-top:3px;
+	clear:both;
+	font-size:9px;
+	line-height:9px;
+	color:#444;
+	display:block;
+	font-weight:bold;
+}
+
+form li span label{
+	margin:0;
+	padding-top:3px;
+	clear:both;
+	font-size:9px;
+	line-height:9px;
+	color:#444;
+	display:block;
+}
+.clear{
+	clear:both !important;
+}
+form li label{
+	font-weight:bold;
+}
+/*
+table{ border-collapse: collapse; border:1px solid black;}
+table tr.rowA { background-color: white; }
+table tr.rowB { background-color: silver; }
+table td{padding:6px;}
+table th {border-bottom:1px solid black;}
+*/
+#stats{
+	border:1px solid #80B5D0;
+	background-color:#C6D9E9;
+	padding:20px;
+}
+#stats ul, #stats ul li {display:inline;}
+#stats ul li {list-style-type:none;}
+.stat{
+	padding-left:20px;
+}
+.stat span{}
+.clearthemall{
+	clear: both;
+}
+#new_reg{
+	width:600px;
+}
+#footer{
+	margin-top:20px;
+	text-align:center;
+}
+#footer a:link, #footer a:visited{
+	color:#fff;
+}
+#footer a:hover, #footer a:active{
+	color:#00F;
+}
+#adminHeader{
+	margin:0;
+	padding:0;
+	color:#000;
+	font-size:0.8em;
+	text-align:right;
+}
+#regInfo ul {
+	margin:0;
+	padding:0;
+}
+#regInfo ul li {
+	list-style-type:none;
+}
+#payment ul {
+	margin:0;
+	padding:0;
+}
+#payment ul li {
+	list-style-type:none;
+}
