@@ -1,0 +1,244 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 748px;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+#navcontainer {
+	margin-top:10px;
+	margin-bottom:0;
+}
+#navlist
+{
+margin: 0;
+padding: 0 0 20px 0;
+border-bottom: 1px solid #2E65A8;
+}
+
+#navlist ul, #navlist li
+{
+margin: 0;
+padding: 0;
+display: inline;
+list-style-type: none;
+}
+
+#navlist a:link, #navlist a:visited
+{
+float: left;
+line-height: 14px;
+font-weight: bold;
+margin: 0 10px 4px 0;
+text-decoration: none;
+color: #999;
+}
+
+#navlist a:link#current, #navlist a:visited#current, #navlist a:hover
+{
+border-bottom: 4px solid #2E65A8;
+padding-bottom: 2px;
+background: transparent;
+color: #2E65A8;
+}
+
+#navlist a:hover { color: #2E65A8; }
+#header h1{
+	text-align:center;
+}
+#footer {
+	width:748px;
+	margin: 0 auto;
+	margin-top: 20px;
+	color:#fff;
+}
+#footer a:link, #footer a:visited{
+	color:#fff;
+}
+#footer a:hover, #footer a:active{
+	color:#00F;
+}
+dl.event
+{
+margin: 2em 0;
+padding: 0;
+}
+.event dt
+{
+position: relative;
+left: 0;
+top: 2em;
+width: 10em;
+font-weight: bold;
+text-align:right;
+}
+.event dd
+{
+border-left: 1px solid #000;
+margin: 0 0 0 11em;
+padding: 0 0 .5em .5em;
+}
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+legend{font-size: 1.5em;}
+fieldset{
+	padding:10px;
+	margin-top:10px;
+	background-color:#CFEBF6;
+	border: 1px solid #14568A;
+}
+fieldset legend {
+	font-weight: bold;
+	background:#14568A;
+	padding:5px;
+	font-size: 1.2em;
+	color:#fff;
+}
+ul#formSection {
+	margin:0;
+	padding:0;
+}
+ul#formSection li {
+	margin:0;
+	padding:0 0 20px 0;
+	position:relative;
+	clear:both;
+	list-style-type:none;
+}
+ul#formSection li span {
+	float:left;
+	padding-right: 2px;
+}
+
+div#billing ul#billSection {
+	margin:0;
+	padding:0;
+}
+div#billing ul#billSection li {
+	margin:0;
+	padding:0 0 20px 0;
+	position:relative;
+	clear:both;
+	list-style-type:none;
+}
+div#billing ul#billSection li span {
+	float:left;
+	padding-right: 2px;
+}
+ul#billSection li span label{
+	margin:0;
+	padding-top:3px;
+	clear:both;
+	font-size:9px;
+	line-height:9px;
+	color:#444;
+	display:block;
+	font-weight:bold;
+}
+
+form li span label{
+	margin:0;
+	padding-top:3px;
+	clear:both;
+	font-size:9px;
+	line-height:9px;
+	color:#444;
+	display:block;
+}
+.clear{
+	clear:both !important;
+}
+form li label{
+	font-weight:bold;
+}

@@ -14,7 +14,3 @@ config/passwords_config.yml
 config/s3.yml
 config/newrelic.yml
 config/initializers/hoptoad.rb
-app/views/about.html.erb
-app/views/schedule.html.erb
-app/views/travel.html.erb
-app/views/index.html.erb

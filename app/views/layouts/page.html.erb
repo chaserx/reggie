@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title><%= h(yield(:title) || "Untitled") %></title>
+    <%= stylesheet_link_tag 'page' %>
+    <%= yield(:head) %>
+		<link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div id="container">
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%- end -%>
+      
+      <div id="header">
+				<h1><%= display_eventname %></h1>
+				<div id="navcontainer">
+					<ul id="navlist">
+						<li><%= link_to "Register Now", new_registration_path %></li>
+						<li><%= link_to "Schedule", schedule_path %></li>
+						<li><%= link_to "Travel", travel_path %></li>
+						<li><%= link_to "About", about_path %></li>
+					</ul>
+				</div>
+			</div>
+      
+      <%= yield %>
+    </div>
+		<div id="footer">
+			<p>&copy; 2009 | <%= link_to 'Terms', terms_path %> | <%= link_to 'Privacy', privacy_path %></p>
+		</div>
+  </body>
+</html>
