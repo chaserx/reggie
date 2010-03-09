@@ -20,9 +20,9 @@
       <div id="content">
       	<%= yield  %>
       </div>
-      <div id="footer">
-      	<p>&copy; 2010 | Terms | Privacy </p>
-      </div>
+    </div>
+    <div id="footer">
+    	<p>&copy; 2010 | <%= link_to 'Terms', terms_path %> | <%= link_to 'Privacy', privacy_path %> </p>
     </div>
   </body>
 </html>

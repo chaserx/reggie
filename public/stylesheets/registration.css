@@ -188,7 +188,7 @@ table th {border-bottom:1px solid black;}
 	text-align:center;
 }
 #footer a:link, #footer a:visited{
-	color:#fff;
+	color:#000;
 }
 #footer a:hover, #footer a:active{
 	color:#00F;
