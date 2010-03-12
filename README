@@ -1,0 +1,22 @@
+# Reggie
+A Ruby on Rails web application for use in the registration of attendees to small university conferences or symposia. 
+
+## Actions:
+
++ Receive information from attendees including an abstract via file upload
++ Email attendee their registration receipt
++ All registrations receipts are publicly available
++ All administrative actions (view all, edit, delete) require authorization
+
+## Inactions:
+
++ Take payment
+
+
+## Setup
+
+Put setup info here.
+
+## Hosting
+
+Hosting is meant for Heroku and Amazon S3 for file uploads, but this could easily modified for a VPS. 
