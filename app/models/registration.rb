@@ -1,4 +1,8 @@
 class Registration < ActiveRecord::Base
+  
+  has_friendly_id :lastname, :use_slug => true
+  
+
 
   has_attached_file :abstract, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => "/:style/:filename"
   

@@ -1,4 +1,6 @@
 class RegistrationsController < ApplicationController
+  
+  
   def index
     @registrations = Registration.all
     respond_to do |format|
@@ -61,4 +63,5 @@ class RegistrationsController < ApplicationController
     flash[:notice] = "Successfully destroyed registration."
     redirect_to registrations_url
   end
+  
 end
