@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :user_sessions
+
+  map.resources :users
+
   map.resources :registrations
   
   map.with_options :controller => 'page' do |page|
@@ -9,6 +13,9 @@ ActionController::Routing::Routes.draw do |map|
     page.privacy 'privacy', :action => 'privacy'
     page.terms 'terms', :action => 'terms'
   end
+
+  map.login "login", :controller => "user_sessions", :action => "new"
+  map.logout "logout", :controller => "user_sessions", :action => "destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
 

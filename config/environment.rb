@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "hoptoad_notifier"
   config.gem "will_paginate"
   config.gem "friendly_id", :version => ">= 2.3.3"
+  config.gem "authlogic", :version => '2.1.3'
   
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

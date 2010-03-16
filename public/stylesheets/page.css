@@ -242,3 +242,7 @@ form li span label{
 form li label{
 	font-weight:bold;
 }
+#user_nav {
+  float: right;
+  font-size: 12px;
+}

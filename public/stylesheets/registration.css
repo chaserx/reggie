@@ -214,3 +214,7 @@ table th {border-bottom:1px solid black;}
 #payment ul li {
 	list-style-type:none;
 }
+#user_nav {
+	text-align:right;
+  font-size: 12px;
+}

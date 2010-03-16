@@ -1,5 +1,5 @@
 class RegistrationsController < ApplicationController
-  
+  before_filter :require_user, :except => [:show, :new, :create]
   
   def index
     @registrations = Registration.all
