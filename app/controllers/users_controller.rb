@@ -1,6 +1,13 @@
 class UsersController < ApplicationController
-  before_filter :require_user, :only => [:new, :create], :unless => Proc.new { users = User.find(:all); users.empty? }
-  before_filter :require_user, :only => [:show, :edit, :update]
+  # there's probably a better practice for this 
+  # idea here is that the first user, admin, can create an account while subsequent users must be created by admin
+  # alternatively seed data could have solved this, i think.
+  # db hit
+  if User.count == 0
+    before_filter :require_user, :except => [:new, :create]
+  else
+    before_filter :require_user
+  end
 
     def new
       @user = User.new
@@ -33,4 +40,5 @@ class UsersController < ApplicationController
         render :action => :edit
       end
     end
+
 end
