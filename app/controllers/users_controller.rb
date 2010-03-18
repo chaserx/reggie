@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # there's probably a better practice for this 
   # idea here is that the first user, admin, can create an account while subsequent users must be created by admin
   # alternatively seed data could have solved this, i think.
-  # db hit
+  # db hit but i guess doesn't impact the interaction of average user
   if User.count == 0
     before_filter :require_user, :except => [:new, :create]
   else
