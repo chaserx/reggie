@@ -30,6 +30,7 @@
 <hr />
 <h3>&raquo; Admin Actions</h3>
 <div id="adminActions">
+  <p>Registration is <%= is_reg_open? %></p>
 	<%= link_to 'New Registration', new_registration_path %> |
 	<%= link_to 'Download All Registration Records (CSV File)', registrations_path(:csv) %>
 </div>

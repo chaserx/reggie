@@ -120,4 +120,12 @@ module RegistrationsHelper
     return reg.title + " " + reg.firstname + " " + reg.lastname
   end
   
+  def is_reg_open?
+    if Settings.allow_registrations
+      render :partial => 'open'
+    else
+      render :partial => 'closed'
+    end
+  end
+  
 end

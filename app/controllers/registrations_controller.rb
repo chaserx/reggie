@@ -1,6 +1,8 @@
 class RegistrationsController < ApplicationController
   before_filter :require_user, :except => [:show, :new, :create]
   
+  before_filter :registration_open?, :only => :new
+  
   def index
     @registrations = Registration.all
     respond_to do |format|
@@ -64,4 +66,16 @@ class RegistrationsController < ApplicationController
     redirect_to registrations_url
   end
   
+  protected
+  
+  def registration_open?
+    #redirect_to :action => 'new' and return false unless Settings.allow_registrations
+    
+    if Settings.allow_registrations
+      return false
+    else
+      flash[:error] = "Sorry, symposium registration is closed."
+      redirect_to root_url
+    end
+  end
 end
