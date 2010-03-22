@@ -78,4 +78,13 @@ class RegistrationsController < ApplicationController
       redirect_to root_url
     end
   end
+  
+  def switch_registration_availability
+    case Settings.allow_registrations
+    when false
+      Settings.allow_registrations = true
+    when true
+      Settings.allow_registrations = false
+    end
+  end
 end
