@@ -7,6 +7,7 @@ class RegistrationsController < ApplicationController
     @registrations = Registration.all
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.xml  { render :xml => @registrations }
       format.csv {
             registrations = Registration.find(:all, :order => "lastname ASC")
@@ -79,12 +80,5 @@ class RegistrationsController < ApplicationController
     end
   end
   
-  def switch_registration_availability
-    case Settings.allow_registrations
-    when false
-      Settings.allow_registrations = true
-    when true
-      Settings.allow_registrations = false
-    end
-  end
+  
 end
