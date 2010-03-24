@@ -32,7 +32,8 @@
 <div id="adminActions">
   <div id="regavail"><p>Registration is <%= is_reg_open? %></p></div>
 	<%= link_to 'New Registration', new_registration_path %> |
-	<%= link_to 'Download All Registration Records (CSV File)', registrations_path(:csv) %>
+	<%= link_to 'Download All Registration Records (CSV File)', registrations_path(:csv) %> |
+	<%= link_to 'Download All Abstracts (ZIP file)', registrations_path(:zip) %>
 </div>
 <hr />
 <h3>&raquo; All Registrants</h3>

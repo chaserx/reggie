@@ -11,7 +11,9 @@
 
 <%= render :partial => 'form' %>
 
+<% if current_user %>
 <p>
   <%= link_to "Show", @registration %> |
   <%= link_to "View All", registrations_path %>
 </p>
+<% end %>
