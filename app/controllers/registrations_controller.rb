@@ -34,7 +34,7 @@ class RegistrationsController < ApplicationController
                        #get all of the attachments
 
                        # attempt to get files stored on S3
-                       # FAIL
+                       # apparently works thanks to Vlad Romascanu; http://stackoverflow.com/questions/2338758/zip-up-all-paperclip-attachments-stored-on-s3
                        registrations_with_attachments.each { |e| zip.add("abstracts/#{e.abstract.original_filename}", e.abstract.to_file.path) }
                        # => No such file or directory - http://s3.amazonaws.com/bucket/original/abstract.txt
                        # Should note that these files in S3 bucket are publicly accessible. No ACL. 
