@@ -5,11 +5,12 @@ A Ruby on Rails web application for use in the registration of attendees to smal
 
 + Simple semi-static pages for event information
 + Receive information from attendees including an abstract via file upload (S3 Storage using Paperclip)
-+ Email attendee their registration receipt (using SendGrid addon at Heroku)
++ Email attendee their registration receipt (thinking of using SendGrid addon at Heroku)
 + All registrations receipts are publicly available (URLs slugged with Friendly_ID)
-+ All administrative actions (view all/index, edit, delete) require authorization via Authlogic
++ All administrative actions (view all/index, edit, delete) require authorization via Authlogic. Although, openid seems like a better idea.
 + Export all registration data except for attachments into CSV (FasterCSV) formatted file
-+ Download all abstracts from S3 via a zip file
++ Download all abstracts from S3 into a zip file (Rubyzip; Paperclip)
++ Toggle on/off registrations (rails-settings)
 
 ## Inactions:
 
@@ -23,7 +24,7 @@ Put setup info here.
 
 ## Hosting
 
-Planned for Heroku and Amazon S3 for file uploads, but this could be easily modified for a VPS. 
+Planned for Heroku and Amazon S3 for file uploads, but this could be easily modified for a VPS host. 
 
 ## Plugins / Gems / Generators
 
