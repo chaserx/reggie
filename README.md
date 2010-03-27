@@ -1,6 +1,10 @@
 # Reggie
 A Ruby on Rails web application for use in the registration of attendees to small university conferences or symposia. 
 
+## Why?
+
+Why do this when there are other options? Well...
+
 ## Actions:
 
 + Simple semi-static pages for event information
