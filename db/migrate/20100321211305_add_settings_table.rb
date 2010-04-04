@@ -7,6 +7,7 @@ class AddSettingsTable < ActiveRecord::Migration
     end
     
     add_index :settings, :var, :uniq => true
+    Settings.create :var => "allow_registrations", :value => true
   end
 
   def self.down
