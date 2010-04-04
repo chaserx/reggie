@@ -17,7 +17,8 @@ module RegistrationsHelper
   
   def number_of_abstracts
     total = 0
-    return Registration.find_by_sql('SELECT * FROM registrations WHERE abstract_file_name NOT LIKE ""').size
+    #return Registration.find_by_sql('SELECT * FROM registrations WHERE abstract_file_name NOT LIKE ""').size
+    return Registration.find(:all, :conditions => "abstract_file_name IS NOT NULL").size
   end
   
   def dollars_pledged

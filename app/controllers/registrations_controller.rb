@@ -1,4 +1,8 @@
 class RegistrationsController < ApplicationController
+  require 'fastercsv'
+  require 'zip/zip'
+  require 'zip/zipfilesystem'
+  
   before_filter :require_user, :except => [:show, :new, :create]
   
   before_filter :registration_open?, :only => :new
@@ -22,7 +26,8 @@ class RegistrationsController < ApplicationController
                       :type => 'text/csv', :disposition => 'attachment')
       }
       format.zip {
-                     registrations_with_attachments = Registration.find_by_sql('SELECT * FROM registrations WHERE abstract_file_name NOT LIKE ""')
+                     #registrations_with_attachments = Registration.find_by_sql('SELECT * FROM registrations WHERE abstract_file_name NOT LIKE ""')
+                     registrations_with_attachments = Registration.find(:all, :conditions => "abstract_file_name IS NOT NULL")
                      headers['Cache-Control'] = 'no-cache'  
                      tmp_filename = "#{RAILS_ROOT}/tmp/tmp_zip_" <<
                                      Time.now.to_f.to_s <<
