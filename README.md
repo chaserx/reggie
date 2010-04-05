@@ -33,18 +33,18 @@ Complete and add to project the following files (example files are included):
 * config/passwords_config.yml
 * config/app_config.yml
 
-If you want to use hoptoad, then create and complete the following:
+Hoptoad is included as a gem. Rake file is also included, but you'll need to add your own config file. Run:
 
-* config/initializers/hoptoad.rb
+    script/generate hoptoad --api-key your_key_here
 
-    HoptoadNotifier.configure do |config|
-      config.api_key = 'YOURHOPTOADAPIKEY'
-    end
-    
+For Heroku, make a .gems manifest file as FasterCSV and rubyzip as they are required but not available by default.
+See [http://docs.heroku.com/gems](http://docs.heroku.com/gems)
 
 Step 2. 
 
-For Heroku, make a .gems manifest file as FasterCSV and 
+
+
+
 
 
 
@@ -54,20 +54,20 @@ Planned for Heroku and Amazon S3 for file uploads, but this could be easily modi
 
 ## Plugins / Gems / Generators
 
-* Authlogic
-* FasterCSV
-* Friendly_ID
-* Paperclip
-* Nifty_Generators
-* Hoptoad
-* Heroku
-* Rubyzip
-* Rails-settings
+* [Authlogic](http://github.com/binarylogic/authlogic)
+* [FasterCSV](http://rubygems.org/gems/fastercsv)
+* [Friendly_ID](http://github.com/norman/friendly_id)
+* [Paperclip](http://github.com/thoughtbot/paperclip)
+* [Nifty_Generators](http://github.com/ryanb/nifty-generators)
+* [Hoptoad](http://github.com/thoughtbot/hoptoad_notifier)
+* [Heroku](http://rubygems.org/gems/heroku)
+* [Rubyzip](http://rubygems.org/gems/rubyzip)
+* [Rails-settings](http://github.com/Squeegy/rails-settings)
 
 ## Services
 
 * Amazon S3
 * Heroku
-* SendGrid
+* SendGrid via Heroku Account
 * Hoptoad
 
