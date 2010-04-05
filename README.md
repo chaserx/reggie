@@ -38,11 +38,13 @@ If you want to use hoptoad, then create and complete the following:
 * config/initializers/hoptoad.rb
 
     HoptoadNotifier.configure do |config|
-      config.api_key = 'HOPTOADAPIKEY'
+      config.api_key = 'YOURHOPTOADAPIKEY'
     end
     
 
 Step 2. 
+
+For Heroku, make a .gems manifest file as FasterCSV and 
 
 
 
