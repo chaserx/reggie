@@ -37,6 +37,11 @@ If you want to use hoptoad, then create and complete the following:
 
 * config/initializers/hoptoad.rb
 
+    HoptoadNotifier.configure do |config|
+      config.api_key = 'HOPTOADAPIKEY'
+    end
+    
+
 Step 2. 
 
 
