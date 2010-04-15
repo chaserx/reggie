@@ -96,6 +96,7 @@ Heroku and Amazon S3 for file uploads, but this could be easily modified for a V
 * Hoptoad
 
 ## License
+
 Copyright &copy; 2010 Chase Southard, released under the MIT license. 
 
 
