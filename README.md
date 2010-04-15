@@ -5,6 +5,10 @@ A Ruby on Rails web application for use in the registration of attendees to smal
 
 This isn't mind-blowing code, it's just another Rails app. Why do this when there are other options? Well...
 
+Sadly, this is my annual work excuse to (re-)construct a Rails app for gathering symposium registration information. Creating web apps in Ruby on Rails is quite simply fun - a challenge.
+It's also a good excuse to investigate new gems, services, and technologies. I don't get enough Ruby in my day job. This project has evolved over the past few years.
+Each iteration adds new features and cleans up code. 
+
 ## Actions:
 
 * Simple semi-static pages for event information
@@ -19,7 +23,7 @@ This isn't mind-blowing code, it's just another Rails app. Why do this when ther
 ## Inactions:
 
 * Take payment
-* User modifying their registration (modification only by Admin)
+* User modifying their registration (modification only by Admin) although this would probably be not that difficult to implement.
 
 
 ## Setup
@@ -40,6 +44,17 @@ Hoptoad is included as a gem. Rake file is also included, but you'll need to add
 For Heroku, make a .gems manifest file as FasterCSV and rubyzip as they are required but not available by default.
 See [http://docs.heroku.com/gems](http://docs.heroku.com/gems)
 
+Run
+
+    rake secret
+
+to generate a new pseudo-random key.
+
+Replace new generated key with the old key in
+
+    config/initializers/session_store.rb
+
+
 Step 2. 
 
 Modify the semi-static pages and layouts to your liking. You'll find them in app/views/page/ and app/views/layouts/page.html.erb, respectively.
@@ -54,7 +69,12 @@ Get up and running on Heroku. Follow these steps in the [Heroku Docs](http://doc
 
 ## Hosting
 
-Planned for Heroku and Amazon S3 for file uploads, but this could be easily modified for a VPS host. 
+Heroku and Amazon S3 for file uploads, but this could be easily modified for a VPS host. 
+
+## Language / Framework
+
+* Ruby 1.8.7 p72
+* Rails 2.3.5
 
 ## Plugins / Gems / Generators
 
@@ -68,7 +88,7 @@ Planned for Heroku and Amazon S3 for file uploads, but this could be easily modi
 * [Rubyzip](http://rubygems.org/gems/rubyzip)
 * [Rails-settings](http://github.com/Squeegy/rails-settings)
 
-## Services
+## Services used
 
 * Amazon S3
 * Heroku
